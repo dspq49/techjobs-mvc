@@ -4,6 +4,8 @@
 </head>
 <body>
 
+
+
 <div th:replace="fragments :: page-header"></div>
 
 <div class="container body-content">
@@ -32,11 +34,26 @@
         </p>
 
         <input type="submit" value="Search" />
+
+
+
     </form>
 
     <hr />
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
+
+
+
+        <table class="job-listing" th:each="job : ${jobs}">
+            <tr th:each="someJobs : ${job}">
+                <td th:text="${someJobs.key}"></td>
+                <td th:text="${someJobs.value}"></td>
+                <hr />
+            </tr>
+
+        </table>
+
 
 </div>
 

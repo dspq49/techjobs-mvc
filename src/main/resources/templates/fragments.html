@@ -9,9 +9,37 @@
     <script type="text/javascript" th:src="@{/js/bootstrap.js}"></script>
 
     <title th:text="'TechJobs' + ${title == null ? '' : ' :: ' + title}">TechJobs</title>
+
+    <style type="text/css">
+
+            .job-listing{
+                width:100%;
+                border-collapse:collapse;
+            }
+            .job-listing td{
+                padding:7px; border:#000000 1px solid;
+            }
+
+            .job-listing tr{
+                background: #FFFFFF;
+            }
+
+            .job-listing tr:nth-child(odd){
+                background: #C0C0C0;
+            }
+
+            .job-listing tr:nth-child(even){
+                background: #FFFFFF;
+            }
+
+    </style>
+
 </head>
 
 <body>
+
+
+
 
     <div th:fragment="page-header" class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
@@ -26,6 +54,7 @@
             </div>
         </div>
     </div>
+
 
 </body>
 </html>

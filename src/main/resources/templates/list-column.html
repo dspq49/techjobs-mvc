@@ -12,11 +12,11 @@
 
     <div th:if="${items} and ${items.size()}">
 
-        <table>
+        <table.job-listing>
             <tr th:each="item, idx : ${items}" th:class="${idx.odd} ? 'odd'">
                 <td><a th:href="@{/list/jobs(column=${column},value=${item})}" th:text="${item}"></a></td>
             </tr>
-        </table>
+        </table.job-listing>
 
     </div>
 

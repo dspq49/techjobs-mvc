@@ -12,7 +12,35 @@
 
     <!-- TODO #3 - Use the same list display from search.html -->
 
+    <table class ="job-listing" th:each="job : ${jobs}">
+        <tr th:each="someJobs : ${job}">
+            <td th:text="${someJobs.key}"></td>
+            <td th:text="${someJobs.value}"></td>
+            <hr />
+        </tr>
+
+    </table>
+
+
+
+
+
 </div>
+
+
+
+<p>
+
+    <table th:each="column, item : ${column}" th:class="${item.odd}? 'odd'">
+
+        <tr th:each="mapItem : ${item}">
+            <td th:text="${mapItem.key}">Key</td>
+            <td th:text="${mapItem.value}">Value</td>
+        </tr>
+
+    </table>
+
+</p>
 
 </body>
 </html>

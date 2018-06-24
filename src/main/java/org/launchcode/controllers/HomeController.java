@@ -25,3 +25,6 @@ public class HomeController {
     }
 
 }
+
+
+//shows only views jobs by search and list
