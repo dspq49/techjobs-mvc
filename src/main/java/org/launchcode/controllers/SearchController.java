@@ -45,7 +45,7 @@ public class SearchController {
 //pass something in search and pass something to list-jobs
 // ask what we need to pass to, look at techjobs-console
         } else {
-            newSearch = JobData.findByColumnAndValue(searchTerm, searchType);
+            newSearch = JobData.findByColumnAndValue(searchType, searchTerm);
             model.addAttribute("jobs", newSearch);
             return "search";
 
